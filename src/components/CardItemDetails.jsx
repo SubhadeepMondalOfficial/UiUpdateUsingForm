@@ -1,12 +1,21 @@
 import PropTypes from 'prop-types';
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function CardItemDetails(props) {
     //  const month = props.itemDate.toLocaleString('en-US', {month: 'long'})
     //  const year = props.itemDate.getFullYear()
     //  const day = props.itemDate.toLocaleString('en-Us', {day: '2-digit'})
+    const monthList = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 
-    const month = props.itemDate.split('-')[1]
+    let monthInNum = (props.itemDate.split('-')[1])
+    if(monthInNum < 10){
+        monthInNum = monthInNum.charAt(1)
+    }
+    let [month, setMonth] = useState(monthList[monthInNum])
+    
+    useEffect(()=>{setMonth(monthList[monthInNum-1])},[setMonth])
+    console.log(monthInNum);
+    
     const year = props.itemDate.split('-')[0]
     const day = props.itemDate.split('-')[2]
 

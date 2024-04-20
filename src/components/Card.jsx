@@ -1,3 +1,4 @@
+import propTypes from 'prop-types'
 import CardItem from "./CardItem"
 import CardItemDetails from "./CardItemDetails"
 CardItemDetails
@@ -8,6 +9,10 @@ function Card(props) {
             <CardItem items={props.items}/>
         </div>
     )
+}
+
+Card.propTypes = {
+    items: propTypes.array.isRequired
 }
 
 export default Card

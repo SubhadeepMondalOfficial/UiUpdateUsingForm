@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import Card from './components/Card'
 import CardForm from './components/CardForm'
 
@@ -8,17 +8,17 @@ function App() {
   const oldItemDetails = [
     {
         key: 1,
-        itemDate: '2010-2-1',
+        itemDate: '2010-02-01',
         itemName: 'boAt Earphone',
     },
     {
         key: 2,
-        itemDate: '2015-5-2',
+        itemDate: '2015-05-02',
         itemName: 'Noise AirBud',
     },
     {
         key: 3,
-        itemDate: '2020-10-3',
+        itemDate: '2020-10-03',
         itemName: 'Samsung Neckband',
     },
   ];

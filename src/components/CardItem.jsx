@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import CardItemDetails from "./CardItemDetails";
 
 
@@ -17,5 +17,9 @@ function CardItem(props) {
     </>
   )
 }
+
+CardItem.propTypes = {
+  items: PropTypes.object.isRequired,
+};
 
 export default CardItem;
